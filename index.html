@@ -1,0 +1,956 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Анастасия Чепкасова: консультант по планировке, декору и текстильному оформлению интерьера. Работаю онлайн по всей России.">
+<style>html{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Анастасия Чепкасова</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Golos+Text:wght@400;500;600&display=swap">
+<style>
+/* Layout: four tabs in one page. Olive hero with a layered portrait (frame, plate, badge) taken from the brandbook cover; cornsilk pages for work and prices. */
+:root{
+  --olive:#5F6F52;        /* Dark Olive Green: lead surface */
+  --olive-deep:#46543B;   /* shade of the olive for footer */
+  --laurel:#A9B388;       /* Laurel Green: plates, soft fills */
+  --cornsilk:#FEFAE0;     /* paper */
+  --meringue:#F9EBC7;     /* warm band */
+  --camel:#B99470;        /* rules, frames */
+  --orange:#C4661F;       /* Alloy Orange: accent */
+  --russet:#783D19;       /* Russet: strong text, buttons */
+  --ink:#2E2416;
+  --ink-soft:#5B4B33;
+  --serif:"Cormorant Garamond","Cormorant",Georgia,"Times New Roman",serif;
+  --sans:"Golos Text","Segoe UI",Roboto,Arial,sans-serif;
+  --gutter:clamp(16px,4vw,48px);
+  --maxw:1180px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:auto}
+body{margin:0;background:var(--cornsilk);color:var(--ink);font-family:var(--sans);font-size:1.0625rem;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:clip}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3,p,ul,figure,blockquote{margin:0}
+ul{padding:0;list-style:none}
+h1,h2,h3{font-family:var(--serif);font-weight:500;text-wrap:balance}
+:focus-visible{outline:3px solid var(--orange);outline-offset:3px}
+.wrap{width:100%;max-width:calc(var(--maxw) + 2*var(--gutter));margin-inline:auto;padding-inline:var(--gutter)}
+
+/* nav */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--olive);color:var(--cornsilk);border-bottom:1px solid rgba(254,250,224,.22)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:10px}
+.mono{font-family:var(--serif);font-size:1.7rem;font-weight:500;letter-spacing:.04em;line-height:1;text-decoration:none;border:1.5px solid var(--cornsilk);padding:.3rem .55rem .35rem;border-radius:50%;display:grid;place-items:center;min-width:2.9rem;aspect-ratio:1;background:none;color:inherit;cursor:pointer}
+.tabs{display:flex;gap:clamp(.7rem,2.4vw,2rem)}
+.tabs a{font-size:.95rem;font-weight:500;text-decoration:none;padding:.85rem 0 .75rem;border-bottom:2px solid transparent;color:rgba(254,250,224,.92);transition:color .2s,border-color .2s}
+.tabs a:hover{color:var(--cornsilk)}
+.tabs a[aria-current="page"]{color:var(--cornsilk);border-color:var(--orange)}
+
+/* tab panels */
+.panel{animation:panel-in .45s ease both}
+@keyframes panel-in{from{opacity:0}to{opacity:1}}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;font:600 1rem/1.2 var(--sans);text-decoration:none;padding:.95rem 1.6rem;border-radius:999px;border:1.5px solid transparent;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.btn-light{background:var(--cornsilk);color:var(--russet)}
+.btn-light:hover{background:var(--meringue)}
+.btn-dark{background:var(--russet);color:var(--cornsilk)}
+.btn-dark:hover{background:#5d2e11}
+.btn-line{border-color:currentColor;background:transparent}
+.btn-line:hover{background:rgba(254,250,224,.12)}
+
+/* hero */
+.hero{background:var(--olive);color:var(--cornsilk);padding-block:clamp(2.5rem,6vw,5rem) clamp(3.5rem,7vw,6rem);overflow-x:clip}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(2rem,6vw,5.5rem);align-items:center}
+.hero h1{font-size:clamp(3.1rem,9.2vw,7rem);line-height:.92;letter-spacing:-.01em;font-weight:400}
+.hero h1 span{display:block}
+.role{margin-top:1.6rem;font-family:var(--serif);font-style:italic;font-size:clamp(1.4rem,2.6vw,2rem);line-height:1.25;color:var(--meringue);max-width:28ch}
+.lead{margin-top:1.4rem;max-width:46ch;color:rgba(254,250,224,.92)}
+.perks{margin-top:1.8rem;display:grid;gap:.7rem;max-width:50ch}
+.perks li{display:grid;grid-template-columns:1.1rem 1fr;gap:.7rem;line-height:1.45;font-size:1rem}
+.perks li::before{content:"";width:.7rem;height:1px;background:var(--laurel);margin-top:.8em;box-shadow:0 3px 0 var(--laurel)}
+.hero .cta{margin-top:2.2rem;display:flex;flex-wrap:wrap;gap:.8rem}
+
+.portrait{position:relative;margin:1.2rem 1.4rem 2.6rem 1rem;max-width:30rem;justify-self:center;width:100%}
+.portrait .plate{position:absolute;inset:2.4rem -1.6rem -1.6rem 3.2rem;background:var(--laurel)}
+.portrait img{position:relative;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 20%}
+.portrait .frame{position:absolute;inset:-1rem 1.6rem 1.4rem -1rem;border:1.5px solid var(--cornsilk);pointer-events:none}
+.badge{position:absolute;left:-1.6rem;bottom:-2.4rem;width:8.6rem;aspect-ratio:1;border-radius:50%;background:var(--russet);color:var(--cornsilk);display:grid;place-content:center;text-align:center;padding:.8rem;line-height:1.1}
+.badge b{font-family:var(--serif);font-size:2.6rem;font-weight:500;display:block}
+.badge span{font-size:.78rem;line-height:1.25;display:block}
+.hero .portrait{animation:rise .9s .1s cubic-bezier(.2,.7,.2,1) both}
+.hero .portrait .plate{animation:slide .9s .35s cubic-bezier(.2,.7,.2,1) both}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@keyframes slide{from{transform:translate(-26px,-18px);opacity:0}to{transform:none;opacity:1}}
+
+/* scroll-built floor plan */
+.plan-stage{position:relative;background-color:var(--olive);color:var(--cornsilk);overflow:hidden;min-height:30rem;
+  background-image:linear-gradient(rgba(254,250,224,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(254,250,224,.055) 1px,transparent 1px);background-size:36px 36px}
+.plan-art{position:absolute;top:0;right:0;bottom:0;width:62%;display:grid;place-items:center;padding:1.2rem}
+.plan-art svg{width:100%;height:100%;overflow:visible}
+.plan-text{position:relative;z-index:2;padding-block:clamp(1.8rem,5vw,3.6rem)}
+.plan-text h1{font-size:clamp(3rem,7.4vw,6.2rem);line-height:.92;letter-spacing:-.01em;font-weight:400}
+.plan-text h1 span{display:block}
+.plan-text .role{margin-top:1.4rem;max-width:22ch}
+.plan-hint{position:absolute;left:50%;bottom:1.1rem;transform:translateX(-50%);z-index:3;margin:0;font-size:.95rem;color:var(--cornsilk);text-align:center}
+.plan-hint::after{content:"";display:block;width:1px;height:1.6rem;margin:.5rem auto 0;background:var(--cornsilk)}
+.plan [data-plan]{transform-box:fill-box;transform-origin:center}
+#plan-wall,#plan-wall2{animation:plan-draw 1.8s ease-out both}
+#plan-wall2{animation-delay:.3s}
+@keyframes plan-draw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+.js-plan .plan-track{height:430vh}
+.js-plan .plan-stage{position:sticky;top:calc(env(safe-area-inset-top,0px) + var(--navh,68px));height:calc(100dvh - var(--navh,68px))}
+@media (max-width:860px){
+  .plan-art{top:auto;left:0;width:100%;height:60%}
+  .plan-text .role{max-width:30ch}
+}
+
+/* home: philosophy + stages */
+.idea{padding-block:clamp(3.5rem,8vw,6.5rem);background:var(--cornsilk)}
+.idea blockquote{font-family:var(--serif);font-size:clamp(1.9rem,4.4vw,3.4rem);line-height:1.12;max-width:24ch;color:var(--russet);font-weight:500;text-wrap:balance}
+.idea p{margin-top:1.6rem;max-width:58ch;color:var(--ink-soft)}
+.stages{background:var(--meringue);padding-block:clamp(3rem,6vw,5rem)}
+.stages h2{font-size:clamp(2rem,4vw,3rem);color:var(--russet)}
+.steps{margin-top:2.4rem;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1.6rem;counter-reset:s;position:relative}
+.steps li{position:relative;padding-top:3.4rem;counter-increment:s}
+.steps li::before{content:counter(s);position:absolute;top:0;left:0;width:2.4rem;aspect-ratio:1;border-radius:50%;background:var(--olive);color:var(--cornsilk);display:grid;place-items:center;font-family:var(--serif);font-size:1.3rem;z-index:1}
+.steps li::after{content:"";position:absolute;top:1.2rem;left:2.4rem;right:-1.6rem;border-top:1.5px dashed var(--camel)}
+.steps li:last-child::after{display:none}
+.steps h3{font-size:1.5rem;color:var(--ink)}
+.steps p{margin-top:.4rem;font-size:.97rem;color:var(--ink-soft);max-width:26ch}
+
+/* page headers */
+.page-head{padding-block:clamp(2.6rem,6vw,4.5rem) 1.6rem}
+.page-head h2{font-size:clamp(2.6rem,6vw,4.6rem);line-height:1;color:var(--russet);font-weight:500}
+.page-head p{margin-top:.9rem;max-width:52ch;color:var(--ink-soft)}
+
+/* works */
+.filters{display:flex;flex-wrap:wrap;gap:.6rem;margin-block:1.4rem 2rem}
+.chip{font:500 .95rem/1 var(--sans);padding:.95rem 1.2rem;border-radius:999px;border:1.5px solid var(--camel);background:transparent;color:var(--ink);cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.chip:hover{border-color:var(--russet)}
+.chip[aria-pressed="true"]{background:var(--olive);border-color:var(--olive);color:var(--cornsilk)}
+.gallery{display:grid;gap:clamp(2.4rem,5vw,3.8rem);padding-bottom:clamp(3rem,7vw,5.5rem)}
+.group[hidden]{display:none}
+.group h3{font-size:clamp(1.9rem,3.6vw,2.7rem);color:var(--russet);padding-bottom:.6rem;margin-bottom:1.1rem;border-bottom:1px solid var(--camel)}
+.strip{--h:230px;display:flex;flex-wrap:wrap;gap:.6rem}
+.strip::after{content:"";flex-grow:999}
+.group[data-kind="plans"] .strip{--h:430px;gap:1.2rem}
+.shot{flex:var(--r) 1 calc(var(--r)*var(--h));min-width:0}
+.shot button{display:block;position:relative;width:100%;padding:0;border:0;background:var(--meringue);cursor:zoom-in;overflow:hidden}
+.shot button i{display:block;padding-bottom:calc(100%/var(--r))}
+.shot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.shot button:hover img{transform:scale(1.03)}
+.group:not([data-kind="plans"]) figcaption{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.shot figcaption{margin-top:.5rem;font-size:.92rem;color:var(--ink-soft);line-height:1.35}
+.rooms{margin-top:-.6rem}
+.gallery[data-filter="all"] .group[data-kind="vis"] h3::after{content:" (визуализация)";font-size:.55em;color:var(--ink-soft)}
+.rooms[hidden]{display:none}
+.chip-room{padding:.8rem 1.1rem;font-size:.9rem}
+
+/* squeeze carousel for the works photos */
+#gallery{display:none}
+.sq{container-type:inline-size;margin-bottom:clamp(3rem,7vw,5.5rem);--sq-ms:1000ms}
+.sq[hidden]{display:none}
+.sq-controls{display:flex;justify-content:flex-end;gap:.5rem;margin-bottom:1rem}
+.sq-controls[hidden]{display:none}
+.sq-arrow{width:2.75rem;height:2.75rem;display:grid;place-items:center;border:0;border-radius:50%;background:var(--russet);color:var(--cornsilk);cursor:pointer;transition:background .2s}
+.sq-arrow:hover{background:#5d2e11}
+.sq-view{--sq-h:clamp(230px,40cqi,440px);--sq-gap:16px;--sq-slat-gap:8px;--sq-slat:8px;--sq-radius:4px;--sq-ease:cubic-bezier(.16,1,.3,1);--sq-n:1;--sq-hero:calc(var(--sq-h) * 4 / 3);--sq-room:calc(100cqi - var(--sq-hero) - var(--sq-n) * var(--sq-slat-gap) - 3 * var(--sq-gap) - var(--sq-n) * var(--sq-slat));height:var(--sq-h);overflow:hidden}
+@container (max-width:640px){.sq-view{--sq-h:210px;--sq-gap:10px}}
+.sq-strip{display:flex;height:100%;width:max-content}
+.sq-card{position:relative;flex:none;height:100%;padding:0;border:0;overflow:hidden;background:var(--meringue);cursor:pointer;isolation:isolate;transition-property:width,margin-left;transition-timing-function:var(--sq-ease)}
+.sq-card:focus-visible{outline:3px solid var(--orange);outline-offset:-3px}
+.sq-card img{position:absolute;top:0;bottom:0;left:50%;height:100%;width:var(--sq-hero);min-width:100%;max-width:none;transform:translateX(-50%);object-fit:cover}
+.sq-copy{margin-top:1.4rem}
+.sq-text{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem;animation:sq-in .6s ease both}
+@keyframes sq-in{from{opacity:0}to{opacity:1}}
+.sq-head{display:flex;align-items:baseline;gap:1rem;flex-wrap:wrap}
+.sq-head h3{font-size:clamp(1.8rem,3.4vw,2.6rem);color:var(--russet)}
+.sq-count{font-size:.95rem;color:var(--ink-soft);font-variant-numeric:tabular-nums}
+
+/* sticky filter bar */
+.sticky-bar{position:sticky;top:calc(env(safe-area-inset-top,0px) + var(--navh,68px));z-index:15;background:var(--cornsilk);display:grid;gap:.6rem;padding-block:.8rem;margin-bottom:1.6rem;border-bottom:1px solid var(--camel)}
+.sticky-bar .filters{margin:0}
+.sticky-bar .rooms{margin-top:0}
+@media (max-width:700px){
+  .sticky-bar{padding-block:.6rem;gap:.45rem;margin-bottom:1.2rem}
+  .sticky-bar .filters{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
+  .sticky-bar .filters::-webkit-scrollbar{display:none}
+  .sticky-bar .chip{flex:0 0 auto;white-space:nowrap}
+}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:50;background:rgba(46,36,22,.94);display:grid;grid-template-rows:auto 1fr auto;padding:max(14px,env(safe-area-inset-top,0px)) 14px max(14px,env(safe-area-inset-bottom,0px));color:var(--cornsilk)}
+.lb[hidden]{display:none}
+.lb-top{display:flex;justify-content:space-between;align-items:center;gap:1rem;font-size:.95rem}
+.lb-stage{min-height:0;display:grid;place-items:center;padding-block:.6rem}
+.lb-stage img{max-width:100%;max-height:100%;object-fit:contain}
+.lb-bar{display:flex;justify-content:center;gap:.8rem;padding-top:.4rem}
+.lb button{font:500 .95rem/1 var(--sans);color:var(--cornsilk);background:rgba(254,250,224,.12);border:1px solid rgba(254,250,224,.35);border-radius:999px;padding:.75rem 1.2rem;cursor:pointer}
+.lb button:hover{background:rgba(254,250,224,.22)}
+
+/* prices */
+.menu{border-top:1.5px solid var(--olive)}
+.item{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:.6rem 2rem;padding-block:1.7rem;border-bottom:1px solid var(--camel);align-items:baseline}
+.item h3{font-size:clamp(1.7rem,3.2vw,2.3rem);color:var(--ink)}
+.item p{grid-column:1;margin-top:.1rem;max-width:58ch;color:var(--ink-soft)}
+.cost{grid-row:1;grid-column:2;text-align:right;font-family:var(--serif);font-size:clamp(2rem,4vw,3rem);line-height:1;color:var(--orange);font-weight:500;white-space:nowrap;font-variant-numeric:lining-nums tabular-nums}
+.cost small{display:block;margin-top:.35rem;font-family:var(--sans);font-size:.85rem;color:var(--ink-soft);font-weight:400}
+.help{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(2rem,6vw,5rem);align-items:start;padding-block:clamp(3rem,7vw,5.5rem)}
+.help h2{font-size:clamp(2rem,4.4vw,3.2rem);color:var(--russet)}
+.help ul{margin-top:1.6rem;display:grid;gap:.8rem}
+.help li{display:grid;grid-template-columns:1.1rem 1fr;gap:.7rem}
+.help li::before{content:"";width:.7rem;height:1px;background:var(--orange);margin-top:.85em;box-shadow:0 3px 0 var(--orange)}
+.help .btn{margin-top:2rem}
+.help figure img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.note{margin-top:1.8rem;padding:1.2rem 1.4rem;background:var(--meringue);color:var(--ink-soft);max-width:52ch}
+
+/* contacts */
+.contacts{background:var(--olive);color:var(--cornsilk);padding-block:clamp(2.6rem,6vw,5rem) clamp(3.5rem,7vw,6rem);overflow-x:clip}
+.contacts .wrap{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:clamp(2rem,6vw,5rem);align-items:center}
+.emblem{justify-self:center;width:100%;max-width:23rem}
+.emblem img{width:100%;height:auto;filter:drop-shadow(0 14px 30px rgba(0,0,0,.28))}
+@media (max-width:860px){.emblem{max-width:14rem}}
+.contacts h2{font-size:clamp(2.8rem,7vw,5.2rem);line-height:.98;font-weight:400}
+.contacts .lead{margin-top:1.2rem}
+.ways{margin-top:2.2rem;display:grid;gap:0;border-top:1px solid rgba(254,250,224,.3)}
+.way{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:.5rem 1rem;align-items:center;padding-block:1.1rem;border-bottom:1px solid rgba(254,250,224,.3)}
+.way dt{font-size:.92rem;color:var(--meringue)}
+.way dd{margin:.15rem 0 0;font-family:var(--serif);font-size:clamp(1.6rem,3.6vw,2.2rem);line-height:1.1;overflow-wrap:anywhere;user-select:all}
+.way .act{display:flex;flex-wrap:wrap;gap:.5rem;justify-content:flex-end}
+.way .btn{padding:.9rem 1.2rem;font-size:.95rem}
+.ways{margin-bottom:0}
+.contacts .portrait{max-width:24rem;margin-right:1.2rem}
+.contacts .portrait .plate{background:var(--orange)}
+.copied{min-height:1.4rem;margin-top:.8rem;font-size:.92rem;color:var(--meringue)}
+
+footer{background:var(--olive-deep);color:rgba(254,250,224,.85);padding-block:2rem;font-size:.92rem}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.6rem 2rem}
+footer b{font-family:var(--serif);font-size:1.3rem;font-weight:500;color:var(--cornsilk)}
+
+/* stages page */
+.flow{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:clamp(1rem,2.4vw,2rem);padding-bottom:clamp(3rem,7vw,5.5rem);margin:0;padding-inline:0;list-style:none;counter-reset:f}
+.flow li{counter-increment:f;display:flex;flex-direction:column;gap:1rem;min-width:0}
+.flow .ph{position:relative}
+.flow img{width:100%;aspect-ratio:4/5;object-fit:cover;background:var(--meringue)}
+.flow .ph::before{content:counter(f);position:absolute;top:.8rem;left:.8rem;z-index:1;width:2.4rem;aspect-ratio:1;border-radius:50%;background:var(--olive);color:var(--cornsilk);display:grid;place-items:center;font-family:var(--serif);font-size:1.3rem}
+.flow h3{font-size:clamp(1.5rem,2.1vw,1.8rem);color:var(--russet)}
+.flow .plan img{object-fit:contain;background:#fff;border:1px solid var(--camel)}
+.flow p{margin-top:.3rem;color:var(--ink-soft);max-width:30ch}
+.page-head small{display:block;margin-top:.5rem;font-size:1rem;color:var(--ink-soft)}
+.more{margin-top:2.2rem}
+@media (max-width:1100px){.flow{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:560px){.flow{grid-template-columns:minmax(0,1fr);max-width:30rem}}
+
+@media (max-width:860px){
+  .hero .wrap,.contacts .wrap,.help{grid-template-columns:minmax(0,1fr)}
+  .portrait{max-width:24rem}
+  .steps{grid-template-columns:repeat(2,minmax(0,1fr));gap:2.4rem 1.4rem}
+  .steps li:nth-child(2)::after{display:none}
+  .help figure{order:-1;max-width:26rem}
+}
+@media (max-width:560px){
+  .tabs{gap:.6rem}
+  .tabs a{font-size:.84rem}
+  .mono{font-size:1.4rem;min-width:2.5rem}
+  .item{grid-template-columns:minmax(0,1fr)}
+  .cost{grid-row:auto;grid-column:1;text-align:left;margin-bottom:.2rem}
+  .item h3{order:-1}
+  .item{display:flex;flex-direction:column;gap:.3rem}
+  .item .cost{order:0}
+  .way{grid-template-columns:minmax(0,1fr)}
+  .way .act{justify-content:flex-start}
+  .strip{--h:190px;gap:.45rem}
+  .group[data-kind="plans"] .strip{--h:230px}
+  .badge{width:7rem;left:-.4rem}
+  .badge b{font-size:2.1rem}
+  .steps{grid-template-columns:minmax(0,1fr)}
+  .steps li::after{display:none}
+}
+@media (max-width:380px){
+  .nav .wrap{gap:8px}
+  .tabs{gap:.42rem}
+  .tabs a{font-size:.74rem}
+  .mono{font-size:1.15rem;min-width:2.1rem;padding:.2rem}
+  .hero h1{font-size:2.7rem}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="mono" href="#home" data-go="home" aria-label="На главную">АЧ</a>
+    <nav class="tabs" aria-label="Разделы">
+      <a href="#home" data-go="home">Главная</a>
+      <a href="#works" data-go="works">Работы</a>
+      <a href="#stages" data-go="stages">Этапы</a>
+      <a href="#price" data-go="price">Прайс</a>
+      <a href="#contacts" data-go="contacts">Контакты</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- ГЛАВНАЯ -->
+<section id="home" class="panel" data-panel>
+  <div class="plan" id="plan">
+    <div class="plan-track" id="plan-track">
+      <div class="plan-stage" id="plan-stage">
+        <div class="plan-art">
+    <svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false" stroke="#FEFAE0" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" fill="none">
+      <defs>
+        <filter id="rough" x="-8%" y="-8%" width="116%" height="116%"><feTurbulence type="fractalNoise" baseFrequency="0.022" numOctaves="2" seed="4" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="3.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+      </defs>
+      <g filter="url(#rough)">
+        <path id="plan-wall" d="M90 70 H710 V530 H90 Z" stroke-width="9" pathLength="1" stroke-dasharray="1" stroke-dashoffset="0"/>
+        <path id="plan-wall2" d="M102 82 H698 V518 H102 Z" stroke-width="1.4" opacity=".7" pathLength="1" stroke-dasharray="1" stroke-dashoffset="0"/>
+      </g>
+        <g data-plan data-dir="-1" data-s="0.08" data-d="0.14" data-rot="-12"><g filter="url(#rough)">
+          <rect x="112" y="296" width="222" height="176" rx="10" fill="#A9B388" fill-opacity=".38" stroke-dasharray="7 5"/>
+          <rect x="124" y="308" width="198" height="152" rx="6" fill="none" stroke-width="1.4"/>
+        </g></g>
+        <g data-plan data-dir="-1" data-s="0.16" data-d="0.16" data-rot="10"><g filter="url(#rough)">
+          <rect x="130" y="440" width="204" height="72" rx="12" fill="#C4661F"/>
+          <rect x="130" y="494" width="204" height="18" rx="7" fill="#783D19"/>
+          <rect x="122" y="440" width="18" height="72" rx="8" fill="#783D19"/>
+          <rect x="324" y="440" width="18" height="72" rx="8" fill="#783D19"/>
+          <path d="M198 446 V490 M266 446 V490" stroke-width="1.6"/>
+        </g></g>
+        <g data-plan data-dir="1" data-s="0.3" data-d="0.12" data-rot="-16"><g filter="url(#rough)">
+          <rect x="168" y="368" width="130" height="52" rx="8" fill="#F9EBC7"/>
+          <rect x="178" y="376" width="110" height="36" rx="5" fill="none" stroke-width="1.3"/>
+          <circle cx="262" cy="394" r="9" fill="#A9B388"/>
+        </g></g>
+        <g data-plan data-dir="-1" data-s="0.38" data-d="0.14" data-rot="14"><g filter="url(#rough)">
+          <rect x="112" y="226" width="72" height="74" rx="14" fill="#B99470"/>
+          <rect x="112" y="226" width="22" height="74" rx="10" fill="#783D19"/>
+          <rect x="116" y="226" width="68" height="16" rx="7" fill="#C4661F" stroke-width="1.8"/>
+          <rect x="116" y="284" width="68" height="16" rx="7" fill="#C4661F" stroke-width="1.8"/>
+        </g></g>
+        <g data-plan data-dir="1" data-s="0.5" data-d="0.16" data-rot="-10"><g filter="url(#rough)">
+          <circle cx="520" cy="300" r="50" fill="#F9EBC7"/>
+          <circle cx="520" cy="300" r="36" fill="none" stroke-width="1.3"/>
+          <rect x="503" y="226" width="34" height="32" rx="9" fill="#B99470"/>
+          <rect x="503" y="342" width="34" height="32" rx="9" fill="#B99470"/>
+          <rect x="446" y="283" width="32" height="34" rx="9" fill="#B99470"/>
+          <rect x="562" y="283" width="32" height="34" rx="9" fill="#B99470"/>
+        </g></g>
+        <g data-plan data-dir="1" data-s="0.62" data-d="0.18" data-rot="8"><g filter="url(#rough)">
+          <path d="M356 78 H702 V330 H640 V138 H356 Z" fill="#783D19"/>
+          <rect x="362" y="84" width="54" height="48" fill="#F9EBC7" fill-opacity=".85" stroke-width="2"/>
+          <path d="M362 84 L416 132 M416 84 L362 132" stroke-width="1.3"/>
+          <rect x="468" y="90" width="76" height="38" rx="7" fill="#A9B388" fill-opacity=".6"/>
+          <circle cx="506" cy="109" r="4"/>
+          <rect x="648" y="168" width="46" height="62" rx="5" fill="none" stroke-width="1.6"/>
+          <circle cx="661" cy="184" r="8" fill="none" stroke-width="1.6"/><circle cx="682" cy="184" r="8" fill="none" stroke-width="1.6"/>
+          <circle cx="661" cy="213" r="8" fill="none" stroke-width="1.6"/><circle cx="682" cy="213" r="8" fill="none" stroke-width="1.6"/>
+        </g></g>
+        <g data-plan data-dir="-1" data-s="0.78" data-d="0.1" data-rot="-8"><g filter="url(#rough)">
+          <rect x="128" y="78" width="138" height="30" rx="4" fill="#B99470"/>
+          <rect x="150" y="84" width="94" height="8" rx="2" fill="#783D19" stroke-width="1.6"/>
+        </g></g>
+        <g data-plan data-dir="1" data-s="0.84" data-d="0.08" data-rot="20"><g filter="url(#rough)">
+          <circle cx="672" cy="486" r="24" fill="#A9B388" fill-opacity=".7"/>
+          <path d="M672 486 L656 470 M672 486 L690 472 M672 486 L694 496 M672 486 L660 504 M672 486 L672 462" stroke-width="2"/>
+        </g></g>
+        <g data-plan data-dir="-1" data-s="0.88" data-d="0.08" data-rot="-20"><g filter="url(#rough)">
+          <circle cx="132" cy="162" r="22" fill="#A9B388" fill-opacity=".7"/>
+          <path d="M132 162 L116 148 M132 162 L148 146 M132 162 L152 174 M132 162 L118 178" stroke-width="2"/>
+        </g></g>
+      <g id="plan-details" filter="url(#rough)">
+        <rect x="83" y="238" width="14" height="104" fill="#5F6F52" stroke-width="2"/>
+        <path d="M90 238 V342" stroke-width="1.4"/>
+        <rect x="556" y="522" width="90" height="16" fill="#5F6F52" stroke="none"/>
+        <path d="M560 530 V458" stroke-width="3"/>
+        <path d="M560 458 A72 72 0 0 1 632 530" stroke-width="1.4" stroke-dasharray="5 5"/>
+      </g>
+    </svg>
+        </div>
+        <div class="wrap plan-text">
+          <h1><span>Чепкасова</span><span>Анастасия</span></h1>
+          <p class="role">Консультант по планировке, декору и текстильному оформлению интерьера</p>
+        </div>
+        <p class="plan-hint" id="plan-hint">Листайте вниз</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <ul class="perks">
+          <li>Более 10 лет опыта в интерьерном текстиле</li>
+          <li>Создаю красивые и удобные интерьеры без сложного ремонта</li>
+          <li>Работаю с цветом и делаю дорогие интерьеры бюджетно</li>
+          <li>Продумываю интерьер под образ жизни конкретной семьи</li>
+          <li>Помогаю избежать ошибок при покупке мебели и декора и делюсь лайфхаками</li>
+          <li>Работаю онлайн по всей России</li>
+        </ul>
+        <div class="cta">
+          <a class="btn btn-light" href="https://t.me/chepkasova_an" target="_blank" rel="noopener">Написать в Telegram</a>
+          <a class="btn btn-line" href="#works" data-go="works">Смотреть работы</a>
+        </div>
+      </div>
+      <div class="portrait">
+        <div class="plate"></div>
+        <img src="img/hero.jpg" width="1500" height="2250" alt="Анастасия Чепкасова, консультант по интерьеру">
+        <div class="frame"></div>
+        <div class="badge"><div><b>10+</b><span>лет в интерьерном текстиле</span></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="idea">
+    <div class="wrap">
+      <blockquote>Хороший интерьер начинается не с красивой картинки, а с понимания того, как живёт человек.</blockquote>
+      <p>Поэтому в работе я уделяю внимание не только эстетике, но и удобству, эргономике и атмосфере пространства. Моя задача: создать интерьер, который будет радовать вас каждый день и останется актуальным долгие годы.</p>
+    </div>
+  </div>
+
+  <div class="stages">
+    <div class="wrap">
+      <h2>Этапы моей работы</h2>
+      <ol class="steps" style="list-style:none;margin:2.4rem 0 0;padding:0">
+        <li><h3>Визуализация</h3><p>Понимание будущего интерьера ещё до начала работ</p></li>
+        <li><h3>Комплектация</h3><p>Подбор мебели, освещения и материалов</p></li>
+        <li><h3>Реализация</h3><p>Сопровождение проекта и воплощение идеи</p></li>
+        <li><h3>Текстиль и декор</h3><p>Финальные детали, которые делают интерьер живым</p></li>
+      </ol>
+      <a class="btn btn-dark more" href="#stages" data-go="stages">Этапы на примере санузла</a>
+    </div>
+  </div>
+</section>
+
+<!-- РАБОТЫ -->
+<section id="works" class="panel" data-panel hidden>
+  <div class="wrap">
+    <div class="page-head">
+      <h2>Работы</h2>
+    </div>
+    <div class="sticky-bar" id="sticky-bar">
+    <div class="filters" role="group" aria-label="Фильтр работ">
+      <button class="chip" type="button" data-f="projects" aria-pressed="true">Реализованные проекты</button>
+      <button class="chip" type="button" data-f="vis" aria-pressed="false">Визуализации</button>
+      <button class="chip" type="button" data-f="plans" aria-pressed="false">Планировки</button>
+      <button class="chip" type="button" data-f="all" aria-pressed="false">Всё вместе</button>
+    </div>
+    <div class="filters rooms" id="rooms" data-for="projects" role="group" aria-label="Комнаты">
+      <button class="chip chip-room" type="button" data-room="all" aria-pressed="true">Все комнаты</button>
+      <button class="chip chip-room" type="button" data-room="bedroom" aria-pressed="false">Спальня</button>
+      <button class="chip chip-room" type="button" data-room="hall" aria-pressed="false">Коридор</button>
+      <button class="chip chip-room" type="button" data-room="living" aria-pressed="false">Кухня-гостиная</button>
+      <button class="chip chip-room" type="button" data-room="bath" aria-pressed="false">Санузел</button>
+    </div>
+    <div class="filters rooms" id="rooms-vis" data-for="vis" role="group" aria-label="Комнаты визуализаций" hidden>
+      <button class="chip chip-room" type="button" data-room="all" aria-pressed="true">Все комнаты</button>
+      <button class="chip chip-room" type="button" data-room="v-living" aria-pressed="false">Кухня-гостиная</button>
+      <button class="chip chip-room" type="button" data-room="v-kitchen" aria-pressed="false">Кухня</button>
+      <button class="chip chip-room" type="button" data-room="v-bed" aria-pressed="false">Спальня</button>
+      <button class="chip chip-room" type="button" data-room="v-bath" aria-pressed="false">Санузел</button>
+      <button class="chip chip-room" type="button" data-room="v-hall" aria-pressed="false">Коридор</button>
+      <button class="chip chip-room" type="button" data-room="v-girl" aria-pressed="false">Спальня девочки</button>
+      <button class="chip chip-room" type="button" data-room="v-boy" aria-pressed="false">Спальня мальчика</button>
+    </div>
+    </div>
+    <div class="sq" id="sq" role="group" aria-roledescription="карусель" aria-label="Фотографии работ">
+      <div class="sq-controls">
+        <button type="button" class="sq-arrow" data-dir="-1" aria-label="Назад"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M9.6 2.6 5.1 7.1h9.1v1.8H5.1l4.5 4.5-1.2 1.2-6-6L1.8 8l.6-.6 6-6 1.2 1.2Z"/></svg></button>
+        <button type="button" class="sq-arrow" data-dir="1" aria-label="Вперёд"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M6.4 2.6l4.5 4.5H1.8v1.8h9.1l-4.5 4.5 1.2 1.2 6-6 .6-.6-.6-.6-6-6-1.2 1.2Z"/></svg></button>
+      </div>
+      <div class="sq-view"><div class="sq-strip" id="sq-strip" role="tablist" aria-label="Фотографии работ" aria-orientation="horizontal"></div></div>
+      <div class="sq-copy" aria-live="polite">
+        <div class="sq-text" id="sq-text">
+          <div class="sq-head"><h3 id="sq-title"></h3><span class="sq-count" id="sq-count"></span></div>
+          <button type="button" class="btn btn-dark" id="sq-open">Открыть фото</button>
+        </div>
+      </div>
+    </div>
+    <div class="gallery" id="gallery" data-filter="projects">
+      <div class="group" data-kind="projects" data-room="bedroom"><h3>Спальня</h3><div class="strip">
+        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Спальня"><i></i><img src="img/bedroom01.jpg" width="960" height="1280" alt="Спальня" loading="lazy" decoding="async"></button><figcaption>Спальня</figcaption></figure>
+        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Спальня"><i></i><img src="img/bedroom02.jpg" width="960" height="1280" alt="Спальня" loading="lazy" decoding="async"></button><figcaption>Спальня</figcaption></figure>
+        <figure class="shot" style="--r:1.3333"><button type="button" aria-label="Открыть: Спальня"><i></i><img src="img/bedroom03.jpg" width="1280" height="960" alt="Спальня" loading="lazy" decoding="async"></button><figcaption>Спальня</figcaption></figure>
+        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Спальня"><i></i><img src="img/bedroom04.jpg" width="960" height="1280" alt="Спальня" loading="lazy" decoding="async"></button><figcaption>Спальня</figcaption></figure>
+        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Спальня"><i></i><img src="img/bedroom05.jpg" width="960" height="1280" alt="Спальня" loading="lazy" decoding="async"></button><figcaption>Спальня</figcaption></figure>
+      </div></div>
+      <div class="group" data-kind="projects" data-room="hall"><h3>Коридор</h3><div class="strip">
+        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Коридор"><i></i><img src="img/hall01.jpg" width="960" height="1280" alt="Коридор" loading="lazy" decoding="async"></button><figcaption>Коридор</figcaption></figure>
+        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Коридор"><i></i><img src="img/hall02.jpg" width="960" height="1280" alt="Коридор" loading="lazy" decoding="async"></button><figcaption>Коридор</figcaption></figure>
+        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Коридор"><i></i><img src="img/hall03.jpg" width="960" height="1280" alt="Коридор" loading="lazy" decoding="async"></button><figcaption>Коридор</figcaption></figure>
+        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Коридор"><i></i><img src="img/hall04.jpg" width="960" height="1280" alt="Коридор" loading="lazy" decoding="async"></button><figcaption>Коридор</figcaption></figure>
+        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Коридор"><i></i><img src="img/hall05.jpg" width="960" height="1280" alt="Коридор" loading="lazy" decoding="async"></button><figcaption>Коридор</figcaption></figure>
+        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Коридор"><i></i><img src="img/hall06.jpg" width="960" height="1280" alt="Коридор" loading="lazy" decoding="async"></button><figcaption>Коридор</figcaption></figure>
+        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Коридор"><i></i><img src="img/hall07.jpg" width="960" height="1280" alt="Коридор" loading="lazy" decoding="async"></button><figcaption>Коридор</figcaption></figure>
+        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Коридор"><i></i><img src="img/hall08.jpg" width="960" height="1280" alt="Коридор" loading="lazy" decoding="async"></button><figcaption>Коридор</figcaption></figure>
+      </div></div>
+      <div class="group" data-kind="projects" data-room="living"><h3>Кухня-гостиная</h3><div class="strip">
+        <figure class="shot" style="--r:1.3333"><button type="button" aria-label="Открыть: Кухня-гостиная"><i></i><img src="img/living01.jpg" width="1280" height="960" alt="Кухня-гостиная" loading="lazy" decoding="async"></button><figcaption>Кухня-гостиная</figcaption></figure>
+        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Кухня-гостиная"><i></i><img src="img/living02.jpg" width="960" height="1280" alt="Кухня-гостиная" loading="lazy" decoding="async"></button><figcaption>Кухня-гостиная</figcaption></figure>
+        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Кухня-гостиная"><i></i><img src="img/living03.jpg" width="960" height="1280" alt="Кухня-гостиная" loading="lazy" decoding="async"></button><figcaption>Кухня-гостиная</figcaption></figure>
+        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Кухня-гостиная"><i></i><img src="img/living04.jpg" width="960" height="1280" alt="Кухня-гостиная" loading="lazy" decoding="async"></button><figcaption>Кухня-гостиная</figcaption></figure>
+        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Кухня-гостиная"><i></i><img src="img/living05.jpg" width="960" height="1280" alt="Кухня-гостиная" loading="lazy" decoding="async"></button><figcaption>Кухня-гостиная</figcaption></figure>
+        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Кухня-гостиная"><i></i><img src="img/living06.jpg" width="960" height="1280" alt="Кухня-гостиная" loading="lazy" decoding="async"></button><figcaption>Кухня-гостиная</figcaption></figure>
+      </div></div>
+      <div class="group" data-kind="projects" data-room="bath"><h3>Санузел</h3><div class="strip">
+        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Санузел"><i></i><img src="img/bath01.jpg" width="960" height="1280" alt="Санузел" loading="lazy" decoding="async"></button><figcaption>Санузел</figcaption></figure>
+        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Санузел"><i></i><img src="img/bath02.jpg" width="960" height="1280" alt="Санузел" loading="lazy" decoding="async"></button><figcaption>Санузел</figcaption></figure>
+        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Санузел"><i></i><img src="img/bath03.jpg" width="960" height="1280" alt="Санузел" loading="lazy" decoding="async"></button><figcaption>Санузел</figcaption></figure>
+        <figure class="shot" style="--r:0.6898"><button type="button" aria-label="Открыть: Санузел"><i></i><img src="img/bath04.jpg" width="883" height="1280" alt="Санузел" loading="lazy" decoding="async"></button><figcaption>Санузел</figcaption></figure>
+      </div></div>
+      <div class="group" data-kind="vis" data-room="v-living"><h3>Кухня-гостиная</h3><div class="strip">
+        <figure class="shot" style="--r:2.0126"><button type="button" aria-label="Открыть: Кухня-гостиная"><i></i><img src="img/vis01.jpg" width="1280" height="636" alt="Кухня-гостиная, визуализация" loading="lazy" decoding="async"></button><figcaption>Кухня-гостиная</figcaption></figure>
+        <figure class="shot" style="--r:1.5041"><button type="button" aria-label="Открыть: Кухня-гостиная"><i></i><img src="img/vis04.jpg" width="1280" height="851" alt="Кухня-гостиная, визуализация" loading="lazy" decoding="async"></button><figcaption>Кухня-гостиная</figcaption></figure>
+        <figure class="shot" style="--r:1.6223"><button type="button" aria-label="Открыть: Кухня-гостиная"><i></i><img src="img/vis09.jpg" width="1280" height="789" alt="Кухня-гостиная, визуализация" loading="lazy" decoding="async"></button><figcaption>Кухня-гостиная</figcaption></figure>
+        <figure class="shot" style="--r:1.2673"><button type="button" aria-label="Открыть: Кухня-гостиная"><i></i><img src="img/vis16.jpg" width="1280" height="1010" alt="Кухня-гостиная, визуализация" loading="lazy" decoding="async"></button><figcaption>Кухня-гостиная</figcaption></figure>
+      </div></div>
+      <div class="group" data-kind="vis" data-room="v-kitchen"><h3>Кухня</h3><div class="strip">
+        <figure class="shot" style="--r:1.5006"><button type="button" aria-label="Открыть: Кухня"><i></i><img src="img/vis14.jpg" width="1280" height="853" alt="Кухня, визуализация" loading="lazy" decoding="async"></button><figcaption>Кухня</figcaption></figure>
+      </div></div>
+      <div class="group" data-kind="vis" data-room="v-bed"><h3>Спальня</h3><div class="strip">
+        <figure class="shot" style="--r:2.0031"><button type="button" aria-label="Открыть: Спальня"><i></i><img src="img/vis06.jpg" width="1280" height="639" alt="Спальня, визуализация" loading="lazy" decoding="async"></button><figcaption>Спальня</figcaption></figure>
+        <figure class="shot" style="--r:1.3333"><button type="button" aria-label="Открыть: Спальня"><i></i><img src="img/vis07.jpg" width="1280" height="960" alt="Спальня, визуализация" loading="lazy" decoding="async"></button><figcaption>Спальня</figcaption></figure>
+      </div></div>
+      <div class="group" data-kind="vis" data-room="v-bath"><h3>Санузел</h3><div class="strip">
+        <figure class="shot" style="--r:0.8"><button type="button" aria-label="Открыть: Санузел"><i></i><img src="img/vis02.jpg" width="1024" height="1280" alt="Санузел, визуализация" loading="lazy" decoding="async"></button><figcaption>Санузел</figcaption></figure>
+        <figure class="shot" style="--r:1.1238"><button type="button" aria-label="Открыть: Санузел"><i></i><img src="img/vis17.jpg" width="1280" height="1139" alt="Санузел, визуализация" loading="lazy" decoding="async"></button><figcaption>Санузел</figcaption></figure>
+      </div></div>
+      <div class="group" data-kind="vis" data-room="v-hall"><h3>Коридор</h3><div class="strip">
+        <figure class="shot" style="--r:1.3403"><button type="button" aria-label="Открыть: Коридор"><i></i><img src="img/vis11.jpg" width="1280" height="955" alt="Коридор, визуализация" loading="lazy" decoding="async"></button><figcaption>Коридор</figcaption></figure>
+        <figure class="shot" style="--r:1.7778"><button type="button" aria-label="Открыть: Коридор"><i></i><img src="img/vis10.jpg" width="1280" height="720" alt="Коридор, визуализация" loading="lazy" decoding="async"></button><figcaption>Коридор</figcaption></figure>
+        <figure class="shot" style="--r:1.3333"><button type="button" aria-label="Открыть: Коридор"><i></i><img src="img/vis18.jpg" width="1280" height="960" alt="Коридор, визуализация" loading="lazy" decoding="async"></button><figcaption>Коридор</figcaption></figure>
+      </div></div>
+      <div class="group" data-kind="vis" data-room="v-girl"><h3>Спальня девочки</h3><div class="strip">
+        <figure class="shot" style="--r:1.4463"><button type="button" aria-label="Открыть: Спальня девочки"><i></i><img src="img/vis05.jpg" width="1280" height="885" alt="Спальня девочки, визуализация" loading="lazy" decoding="async"></button><figcaption>Спальня девочки</figcaption></figure>
+        <figure class="shot" style="--r:1.3333"><button type="button" aria-label="Открыть: Спальня девочки"><i></i><img src="img/vis08.jpg" width="1280" height="960" alt="Спальня девочки, визуализация" loading="lazy" decoding="async"></button><figcaption>Спальня девочки</figcaption></figure>
+        <figure class="shot" style="--r:1.3333"><button type="button" aria-label="Открыть: Спальня девочки"><i></i><img src="img/vis15.jpg" width="1280" height="960" alt="Спальня девочки, визуализация" loading="lazy" decoding="async"></button><figcaption>Спальня девочки</figcaption></figure>
+      </div></div>
+      <div class="group" data-kind="vis" data-room="v-boy"><h3>Спальня мальчика</h3><div class="strip">
+        <figure class="shot" style="--r:1.2512"><button type="button" aria-label="Открыть: Спальня мальчика"><i></i><img src="img/vis12.jpg" width="1280" height="1023" alt="Спальня мальчика, визуализация" loading="lazy" decoding="async"></button><figcaption>Спальня мальчика</figcaption></figure>
+        <figure class="shot" style="--r:1.0332"><button type="button" aria-label="Открыть: Спальня мальчика"><i></i><img src="img/vis03.jpg" width="1275" height="1234" alt="Спальня мальчика, визуализация" loading="lazy" decoding="async"></button><figcaption>Спальня мальчика</figcaption></figure>
+        <figure class="shot" style="--r:1.3333"><button type="button" aria-label="Открыть: Спальня мальчика"><i></i><img src="img/vis13.jpg" width="1280" height="960" alt="Спальня мальчика, визуализация" loading="lazy" decoding="async"></button><figcaption>Спальня мальчика</figcaption></figure>
+      </div></div>
+      <div class="group" data-kind="plans"><h3>Планировки</h3><div class="strip">
+        <figure class="shot" style="--r:1.4025"><button type="button" aria-label="Открыть: План расстановки мебели"><i></i><img src="img/plan01.jpg" width="2000" height="1426" alt="План расстановки мебели" loading="lazy" decoding="async"></button><figcaption>План расстановки мебели</figcaption></figure>
+        <figure class="shot" style="--r:1.4025"><button type="button" aria-label="Открыть: План-сценарии выключателей"><i></i><img src="img/plan02.jpg" width="2000" height="1426" alt="План-сценарии выключателей" loading="lazy" decoding="async"></button><figcaption>План-сценарии выключателей</figcaption></figure>
+        <figure class="shot" style="--r:1.1488"><button type="button" aria-label="Открыть: Планировка мебели"><i></i><img src="img/plan03.jpg" width="2000" height="1741" alt="Планировка мебели" loading="lazy" decoding="async"></button><figcaption>Планировка мебели</figcaption></figure>
+        <figure class="shot" style="--r:1.2255"><button type="button" aria-label="Открыть: План розеток"><i></i><img src="img/plan04.jpg" width="2000" height="1632" alt="План розеток" loading="lazy" decoding="async"></button><figcaption>План розеток</figcaption></figure>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ЭТАПЫ -->
+<section id="stages" class="panel" data-panel hidden>
+  <div class="wrap">
+    <div class="page-head">
+      <h2>Этапы моей работы на примере санузла</h2>
+    </div>
+    <ol class="flow">
+      <li>
+        <div class="ph plan"><img src="img/stage0.jpg" width="930" height="704" alt="Чертёж санузла с размерами" loading="lazy"></div>
+        <div><h3>Планировка</h3><p>Расстановка мебели с размерами и продуманной эргономикой</p></div>
+      </li>
+      <li>
+        <div class="ph"><img src="img/stage1.jpg" width="1022" height="1280" alt="Визуализация санузла" loading="lazy"></div>
+        <div><h3>Визуализация</h3><p>Понимание будущего интерьера еще до начала работ</p></div>
+      </li>
+      <li>
+        <div class="ph"><img src="img/stage2.jpg" width="960" height="1280" alt="Образцы плитки и материалов для санузла" loading="lazy"></div>
+        <div><h3>Комплектация</h3><p>Подбор мебели, освещения и материалов</p></div>
+      </li>
+      <li>
+        <div class="ph"><img src="img/stage3.jpg" width="883" height="1280" alt="Готовый санузел" loading="lazy"></div>
+        <div><h3>Реализация</h3><p>Сопровождение проекта и воплощение идеи</p></div>
+      </li>
+      <li>
+        <div class="ph"><img src="img/stage4.jpg" width="960" height="1280" alt="Текстиль и декор в санузле" loading="lazy"></div>
+        <div><h3>Текстиль и декор</h3><p>Финальные детали, которые делают интерьер живым</p></div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ПРАЙС -->
+<section id="price" class="panel" data-panel hidden>
+  <div class="wrap">
+    <div class="page-head">
+      <h2>Прайс</h2>
+    </div>
+    <div class="menu">
+      <article class="item">
+        <h3>Консультация</h3>
+        <div class="cost">3 000 ₽<small>за 1–2 часа</small></div>
+        <p>Разбор вашей квартиры или дома, рекомендации по планировке, мебели, цветам и оформлению.</p>
+      </article>
+      <article class="item">
+        <h3>Планировочное решение</h3>
+        <div class="cost">300 ₽<small>за кв. м</small></div>
+        <p>Несколько вариантов расстановки мебели с учётом особенностей помещения и вашего образа жизни.</p>
+      </article>
+      <article class="item">
+        <h3>Концепт-проект интерьера</h3>
+        <div class="cost">от 1 000 ₽<small>за кв. м</small></div>
+        <p>Планировка (мебель, освещение, розетки и выключатели), концепция, коллажи, подбор мебели, цветовые решения, текстиль и визуализации.</p>
+      </article>
+      <article class="item">
+        <h3>Декорирование</h3>
+        <div class="cost">500 ₽<small>за кв. м</small></div>
+        <p>Подбор штор, тканей, декоративных подушек, покрывал, постельного белья и других текстильных решений для завершённого образа интерьера. Подбор декора и атмосферного освещения, посуды, искусства и флористики.</p>
+      </article>
+    </div>
+  </div>
+
+  <div class="wrap help">
+    <div>
+      <h2>Как я могу помочь</h2>
+      <ul>
+        <li>Разработать удобную планировку и расстановку мебели</li>
+        <li>Продумать эргономику пространства</li>
+        <li>Подобрать цветовую палитру и материалы</li>
+        <li>Создать коллажи и 3D-визуализации будущего интерьера</li>
+        <li>Подобрать мебель, освещение, декор и пространства</li>
+        <li>Помочь создать цельный интерьер, который будет отражать ваш характер и образ жизни</li>
+      </ul>
+      <p class="note">Работаю онлайн по всей России. Напишите мне, и мы обсудим, как сделать ваш интерьер красивым, удобным и именно вашим.</p>
+      <a class="btn btn-dark" href="#contacts" data-go="contacts">Связаться со мной</a>
+    </div>
+    <figure><img src="img/price.jpg" width="960" height="1280" alt="Кухня-гостиная" loading="lazy"></figure>
+  </div>
+</section>
+
+<!-- КОНТАКТЫ -->
+<section id="contacts" class="panel" data-panel hidden>
+  <div class="contacts">
+    <div class="wrap">
+      <div>
+        <h2>Контакты</h2>
+        <p class="lead">Напишите мне, и мы обсудим, как сделать ваш интерьер красивым, удобным и именно вашим. Работаю онлайн по всей России.</p>
+        <dl class="ways" style="margin-bottom:0">
+          <div class="way">
+            <div><dt>Telegram, предпочтительный способ</dt><dd>@chepkasova_an</dd></div>
+            <div class="act">
+              <a class="btn btn-light" href="https://t.me/chepkasova_an" target="_blank" rel="noopener">Открыть чат</a>
+              <button class="btn btn-line" type="button" data-copy="@chepkasova_an">Скопировать</button>
+            </div>
+          </div>
+          <div class="way">
+            <div><dt>MAX и телефон</dt><dd>+7 981 782 89 93</dd></div>
+            <div class="act">
+              <button class="btn btn-line" type="button" data-copy="+7 981 782 89 93">Скопировать</button>
+            </div>
+          </div>
+        </dl>
+        <p class="copied" id="copied" role="status" aria-live="polite"></p>
+      </div>
+      <div class="emblem"><img src="img/flower.webp" width="900" height="900" alt="Цветок" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><b>Чепкасова Анастасия</b><br>Консультант по планировке, декору и текстильному оформлению интерьера</div>
+    <div>Работаю онлайн по всей России<br>Telegram @chepkasova_an</div>
+  </div>
+</footer>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Просмотр фото" hidden>
+  <div class="lb-top"><span id="lb-cap"></span><button type="button" id="lb-close">Закрыть</button></div>
+  <div class="lb-stage"><img id="lb-img" alt=""></div>
+  <div class="lb-bar"><button type="button" id="lb-prev">Назад</button><button type="button" id="lb-next">Вперёд</button></div>
+</div>
+
+<script>
+(function(){
+  var nav=document.querySelector('.nav');
+  function setNavH(){document.documentElement.style.setProperty('--navh',nav.offsetHeight+'px')}
+  setNavH();window.addEventListener('resize',setNavH);
+  if(document.fonts&&document.fonts.ready) document.fonts.ready.then(setNavH);
+  var ids=['home','works','stages','price','contacts'];
+  var panels=ids.map(function(i){return document.getElementById(i)});
+  var links=document.querySelectorAll('.tabs a');
+
+  function show(id,push){
+    if(ids.indexOf(id)<0) id='home';
+    panels.forEach(function(p){
+      var on=p.id===id;
+      if(on&&p.hidden){p.hidden=false;p.style.animation='none';void p.offsetWidth;p.style.animation='';}
+      else if(!on){p.hidden=true;}
+    });
+    links.forEach(function(a){
+      if(a.getAttribute('data-go')===id) a.setAttribute('aria-current','page'); else a.removeAttribute('aria-current');
+    });
+    if(push){try{history.replaceState(null,'','#'+id);}catch(e){}}
+    window.scrollTo(0,0);
+  }
+  document.addEventListener('click',function(e){
+    var a=e.target.closest('[data-go]');
+    if(!a) return;
+    e.preventDefault();
+    show(a.getAttribute('data-go'),true);
+  });
+  window.addEventListener('hashchange',function(){show(location.hash.slice(1),false)});
+  show(location.hash.slice(1),false);
+
+  /* gallery filter */
+  var gallery=document.getElementById('gallery');
+  var shots=[].slice.call(gallery.querySelectorAll('.shot'));
+  var groups=[].slice.call(gallery.querySelectorAll('.group'));
+  var kindChips=document.querySelectorAll('.filters [data-f]');
+  var bars={projects:document.getElementById('rooms'),vis:document.getElementById('rooms-vis')};
+  var curKind='projects',curRoom={projects:'all',vis:'all'};
+  var sqRebuild=null;
+  var stickyBar=document.getElementById('sticky-bar');
+  function backToTop(){
+    var top=(document.getElementById('sq')||gallery).getBoundingClientRect().top+window.pageYOffset-stickyBar.offsetHeight-nav.offsetHeight-12;
+    if(window.pageYOffset>top) window.scrollTo(0,Math.max(top,0));
+  }
+  function apply(){
+    gallery.setAttribute('data-filter',curKind);
+    groups.forEach(function(g){
+      var k=g.getAttribute('data-kind');
+      var okKind=curKind==='all'||k===curKind;
+      var okRoom=curKind==='all'||k==='plans'||curRoom[k]==='all'||g.getAttribute('data-room')===curRoom[k];
+      g.hidden=!(okKind&&okRoom);
+    });
+    kindChips.forEach(function(c){c.setAttribute('aria-pressed',c.getAttribute('data-f')===curKind?'true':'false')});
+    Object.keys(bars).forEach(function(k){
+      bars[k].hidden=curKind!==k;
+      bars[k].querySelectorAll('[data-room]').forEach(function(c){c.setAttribute('aria-pressed',c.getAttribute('data-room')===curRoom[k]?'true':'false')});
+    });
+    if(sqRebuild) sqRebuild();
+  }
+  kindChips.forEach(function(c){c.addEventListener('click',function(){curKind=c.getAttribute('data-f');apply();backToTop()})});
+  Object.keys(bars).forEach(function(k){
+    bars[k].querySelectorAll('[data-room]').forEach(function(c){c.addEventListener('click',function(){curRoom[k]=c.getAttribute('data-room');apply();backToTop()})});
+  });
+  apply();
+
+  /* squeeze carousel over the filtered photos */
+  function initSqueeze(){
+    var root=document.getElementById('sq');
+    if(!root) return;
+    var view=root.querySelector('.sq-view'),strip=document.getElementById('sq-strip'),controls=root.querySelector('.sq-controls');
+    var titleEl=document.getElementById('sq-title'),countEl=document.getElementById('sq-count'),textEl=document.getElementById('sq-text'),openBtn=document.getElementById('sq-open');
+    var reduced=!!(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+    var ms=reduced?0:1000;
+    var SHARES=[-0.06,0.61,0.3,0.15],STRETCHED=[0,0.71,0.4,0.25],SQUEEZED=[-0.12,0.59,0.28,0.13];
+    var list=[],slides=[],count=0,slats=0,visible=0;
+    var seed=0,cards=[],column=0,slid=0,still=false,hover=-1,forward=true,timers=[],nodes={},lastOpen=-1;
+    root.style.setProperty('--sq-ms',ms+'ms');
+    function wrap(i){return ((i%count)+count)%count}
+    function cur(){var c=cards[-column];return c?c.slide:0}
+    function shareOf(col){
+      if(!(hover>=0&&hover<=3&&!reduced)) return SHARES[col];
+      return hover===col?STRETCHED[col]:SQUEEZED[col];
+    }
+    function widthOf(col){
+      if(col<0||col>3) return 'var(--sq-slat)';
+      if(col===0) return 'calc(var(--sq-hero) + var(--sq-room) * '+shareOf(0)+')';
+      return 'max(calc(var(--sq-room) * '+shareOf(col)+'), 22px)';
+    }
+    function makeNode(card){
+      var s=slides[card.slide];
+      var b=document.createElement('button');
+      b.type='button';b.className='sq-card';b.setAttribute('role','tab');b.setAttribute('aria-label',s.title);
+      var img=document.createElement('img');img.src=s.src;img.alt=s.title;img.draggable=false;
+      if(card.key>1) img.loading='lazy';
+      b.appendChild(img);
+      b.addEventListener('mousemove',function(){if(b._col!==hover){hover=b._col;render()}});
+      b.addEventListener('click',function(){
+        if(b._col>0) step(b._col);
+        else if(b._col===0) open(list[card.slide]);
+      });
+      return b;
+    }
+    function render(){
+      var live={};
+      cards.forEach(function(c){live[c.key]=1});
+      Object.keys(nodes).forEach(function(k){if(!live[k]){nodes[k].remove();delete nodes[k]}});
+      cards.forEach(function(c,place){
+        var node=nodes[c.key];
+        if(!node) node=nodes[c.key]=makeNode(c);
+        var col=place+column,w=widthOf(col);
+        node._col=col;
+        node.style.width=w;
+        node.style.marginLeft=place===0?'0':(col<4?'var(--sq-gap)':'var(--sq-slat-gap)');
+        node.style.borderRadius='min(var(--sq-radius), calc('+w+' / 2))';
+        node.style.transitionDuration=still?'0s':'var(--sq-ms)';
+        node.setAttribute('aria-selected',col===0?'true':'false');
+        node.tabIndex=col===0?0:-1;
+        if(strip.children[place]!==node) strip.insertBefore(node,strip.children[place]||null);
+      });
+      strip.style.transform='translateX(calc('+slid+' * (var(--sq-slat) + var(--sq-gap))))';
+      strip.style.transition=still?'none':'transform var(--sq-ms) var(--sq-ease)';
+      var o=cur();
+      if(count&&o!==lastOpen){
+        lastOpen=o;
+        titleEl.textContent=slides[o].title;
+        countEl.textContent=(o+1)+' из '+count;
+        textEl.style.animation='none';void textEl.offsetWidth;textEl.style.animation='';
+      }
+    }
+    function unstill(extra){
+      void strip.offsetWidth;
+      requestAnimationFrame(function(){still=false;if(extra) extra();render()});
+    }
+    function settle(){
+      cards=forward?cards.slice(-visible):cards.slice(0,visible);
+      column=0;slid=0;still=true;render();unstill();
+    }
+    function step(by){
+      if(count<2||by===0) return;
+      timers.forEach(clearTimeout);timers=[];
+      forward=by>0;
+      var k;
+      if(by>0){
+        var last=cards[cards.length-1].slide;
+        for(k=0;k<by;k++) cards.push({key:seed++,slide:wrap(last+1+k)});
+        column-=by;slid-=by;render();
+      }else{
+        var first=cards[0].slide,pre=[];
+        for(k=0;k<-by;k++) pre.push({key:seed++,slide:wrap(first-(-by-k))});
+        cards=pre.concat(cards);slid+=by;still=true;render();
+        unstill(function(){slid=0});
+      }
+      timers.push(window.setTimeout(settle,ms+20));
+    }
+    /* rebuilt every time the filter changes */
+    function rebuild(){
+      list=shots.filter(function(s){return !s.closest('.group[hidden]')});
+      slides=list.map(function(s){return {title:s.querySelector('figcaption').textContent,src:s.querySelector('img').getAttribute('src')}});
+      count=slides.length;
+      timers.forEach(clearTimeout);timers=[];
+      Object.keys(nodes).forEach(function(k){nodes[k].remove();delete nodes[k]});
+      seed=0;column=0;slid=0;still=false;hover=-1;lastOpen=-1;
+      slats=Math.max(0,Math.min(3,count-4));
+      visible=Math.min(count,4)+slats;
+      view.style.setProperty('--sq-n',slats);
+      cards=[];
+      for(var p=0;p<visible;p++) cards.push({key:seed++,slide:wrap(p)});
+      root.hidden=count===0;
+      controls.hidden=count<2;
+      if(count) render();
+    }
+    sqRebuild=rebuild;
+    root.querySelectorAll('.sq-arrow').forEach(function(a){
+      a.addEventListener('click',function(){step(parseInt(a.getAttribute('data-dir'),10))});
+    });
+    openBtn.addEventListener('click',function(){if(count) open(list[cur()])});
+    strip.addEventListener('keydown',function(e){
+      if(e.key==='ArrowRight'){e.preventDefault();step(1)}
+      else if(e.key==='ArrowLeft'){e.preventDefault();step(-1)}
+    });
+    root.addEventListener('mouseleave',function(){if(hover!==-1){hover=-1;render()}});
+    var x0=null;
+    view.addEventListener('touchstart',function(e){x0=e.touches[0].clientX},{passive:true});
+    view.addEventListener('touchend',function(e){
+      if(x0===null) return;
+      var dx=e.changedTouches[0].clientX-x0;x0=null;
+      if(Math.abs(dx)>40) step(dx<0?1:-1);
+    },{passive:true});
+    rebuild();
+  }
+  initSqueeze();
+
+  /* floor plan that builds itself while the page scrolls */
+  (function(){
+    var rootEl=document.getElementById('plan');
+    if(!rootEl) return;
+    var reduced=!!(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+    if(reduced) return;
+    var stage=document.getElementById('plan-stage'),track=document.getElementById('plan-track');
+    var items=[].slice.call(rootEl.querySelectorAll('[data-plan]')).map(function(el){
+      return {el:el,dir:parseFloat(el.getAttribute('data-dir')),s:parseFloat(el.getAttribute('data-s')),d:parseFloat(el.getAttribute('data-d')),rot:parseFloat(el.getAttribute('data-rot'))};
+    });
+    var wall=document.getElementById('plan-wall'),wall2=document.getElementById('plan-wall2'),det=document.getElementById('plan-details'),hint=document.getElementById('plan-hint');
+    document.documentElement.classList.add('js-plan');
+    function clamp(v){return v<0?0:v>1?1:v}
+    function ease(t){var c1=1.25,c3=c1+1;return 1+c3*Math.pow(t-1,3)+c1*Math.pow(t-1,2)}
+    var queued=false;
+    function update(){
+      queued=false;
+      if(document.getElementById('home').hidden) return;
+      var navh=nav.offsetHeight;
+      var total=track.offsetHeight-stage.offsetHeight;
+      var p=total>0?clamp((navh-track.getBoundingClientRect().top)/total):0;
+      items.forEach(function(it){
+        var t=clamp((p-it.s)/it.d),e=t?ease(t):0;
+        it.el.style.transform='translate('+(it.dir*1500*(1-e))+'px,0) rotate('+(it.rot*(1-e))+'deg)';
+        it.el.style.opacity=String(clamp(t*6));
+      });
+      det.style.opacity=String(clamp((p-.92)/.08));
+      hint.style.opacity=String(clamp(1-p*12));
+    }
+    function queue(){if(!queued){queued=true;requestAnimationFrame(update)}}
+    window.addEventListener('scroll',queue,{passive:true});
+    window.addEventListener('resize',queue);
+    update();
+    window.__planUpdate=update;
+  })();
+
+  /* lightbox */
+  var lb=document.getElementById('lb'),lbImg=document.getElementById('lb-img'),lbCap=document.getElementById('lb-cap');
+  var cur=0,list=[],opener=null;
+  function visible(){return shots.filter(function(s){return !s.closest('.group[hidden]')})}
+  function paint(){
+    var s=list[cur],img=s.querySelector('img');
+    lbImg.src=img.getAttribute('src');
+    lbImg.alt=img.alt;
+    lbCap.textContent=s.querySelector('figcaption').textContent+'  ('+(cur+1)+' из '+list.length+')';
+  }
+  function open(s){
+    list=visible();cur=list.indexOf(s);opener=document.activeElement;
+    paint();lb.hidden=false;document.getElementById('lb-close').focus();
+    document.documentElement.style.overflow='hidden';
+  }
+  function close(){
+    lb.hidden=true;document.documentElement.style.overflow='';
+    if(opener&&opener.focus) opener.focus();
+  }
+  function step(d){cur=(cur+d+list.length)%list.length;paint()}
+  shots.forEach(function(s){s.querySelector('button').addEventListener('click',function(){open(s)})});
+  document.getElementById('lb-close').addEventListener('click',close);
+  document.getElementById('lb-prev').addEventListener('click',function(){step(-1)});
+  document.getElementById('lb-next').addEventListener('click',function(){step(1)});
+  lb.addEventListener('click',function(e){if(e.target===lb||e.target.classList.contains('lb-stage'))close()});
+  document.addEventListener('keydown',function(e){
+    if(lb.hidden) return;
+    if(e.key==='Tab'){
+      var f=[].slice.call(lb.querySelectorAll('button')),first=f[0],last=f[f.length-1];
+      if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}
+      else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}
+      return;
+    }
+    if(e.key==='Escape') close();
+    else if(e.key==='ArrowLeft') step(-1);
+    else if(e.key==='ArrowRight') step(1);
+  });
+
+  /* copy buttons */
+  var note=document.getElementById('copied');
+  document.querySelectorAll('[data-copy]').forEach(function(b){
+    b.addEventListener('click',function(){
+      var t=b.getAttribute('data-copy');
+      function ok(){note.textContent='Скопировано: '+t}
+      function fallback(){
+        var dd=b.closest('.way').querySelector('dd');
+        var r=document.createRange();r.selectNodeContents(dd);
+        var sel=window.getSelection();sel.removeAllRanges();sel.addRange(r);
+        note.textContent='Текст выделен, нажмите «Копировать» в меню телефона или Ctrl+C';
+      }
+      if(navigator.clipboard&&navigator.clipboard.writeText){
+        navigator.clipboard.writeText(t).then(ok,fallback);
+      }else fallback();
+    });
+  });
+})();
+</script>
+</body>
+</html>
