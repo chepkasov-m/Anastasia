@@ -440,11 +440,11 @@ footer b{font-family:var(--serif);font-size:1.3rem;font-weight:500;color:var(--c
       <button class="chip" type="button" data-f="all" aria-pressed="false">Всё вместе</button>
     </div>
     <div class="filters rooms" id="rooms" data-for="projects" role="group" aria-label="Комнаты">
-      <button class="chip chip-room" type="button" data-room="all" aria-pressed="true">Все комнаты</button>
-      <button class="chip chip-room" type="button" data-room="bedroom" aria-pressed="false">Спальня</button>
-      <button class="chip chip-room" type="button" data-room="hall" aria-pressed="false">Коридор</button>
+      <button class="chip chip-room" type="button" data-room="all" aria-pressed="true">Все работы</button>
       <button class="chip chip-room" type="button" data-room="living" aria-pressed="false">Кухня-гостиная</button>
+      <button class="chip chip-room" type="button" data-room="hall" aria-pressed="false">Коридор</button>
       <button class="chip chip-room" type="button" data-room="bath" aria-pressed="false">Санузел</button>
+      <button class="chip chip-room" type="button" data-room="bedroom" aria-pressed="false">Спальня</button>
     </div>
     <div class="filters rooms" id="rooms-vis" data-for="vis" role="group" aria-label="Комнаты визуализаций" hidden>
       <button class="chip chip-room" type="button" data-room="all" aria-pressed="true">Все комнаты</button>
@@ -471,12 +471,13 @@ footer b{font-family:var(--serif);font-size:1.3rem;font-weight:500;color:var(--c
       </div>
     </div>
     <div class="gallery" id="gallery" data-filter="projects">
-      <div class="group" data-kind="projects" data-room="bedroom"><h3>Спальня</h3><div class="strip">
-        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Спальня"><i></i><img src="img/bedroom01.jpg" width="960" height="1280" alt="Спальня" loading="lazy" decoding="async"></button><figcaption>Спальня</figcaption></figure>
-        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Спальня"><i></i><img src="img/bedroom02.jpg" width="960" height="1280" alt="Спальня" loading="lazy" decoding="async"></button><figcaption>Спальня</figcaption></figure>
-        <figure class="shot" style="--r:1.3333"><button type="button" aria-label="Открыть: Спальня"><i></i><img src="img/bedroom03.jpg" width="1280" height="960" alt="Спальня" loading="lazy" decoding="async"></button><figcaption>Спальня</figcaption></figure>
-        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Спальня"><i></i><img src="img/bedroom04.jpg" width="960" height="1280" alt="Спальня" loading="lazy" decoding="async"></button><figcaption>Спальня</figcaption></figure>
-        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Спальня"><i></i><img src="img/bedroom05.jpg" width="960" height="1280" alt="Спальня" loading="lazy" decoding="async"></button><figcaption>Спальня</figcaption></figure>
+      <div class="group" data-kind="projects" data-room="living"><h3>Кухня-гостиная</h3><div class="strip">
+        <figure class="shot" style="--r:1.3333"><button type="button" aria-label="Открыть: Кухня-гостиная"><i></i><img src="img/living01.jpg" width="1280" height="960" alt="Кухня-гостиная" loading="lazy" decoding="async"></button><figcaption>Кухня-гостиная</figcaption></figure>
+        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Кухня-гостиная"><i></i><img src="img/living02.jpg" width="960" height="1280" alt="Кухня-гостиная" loading="lazy" decoding="async"></button><figcaption>Кухня-гостиная</figcaption></figure>
+        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Кухня-гостиная"><i></i><img src="img/living03.jpg" width="960" height="1280" alt="Кухня-гостиная" loading="lazy" decoding="async"></button><figcaption>Кухня-гостиная</figcaption></figure>
+        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Кухня-гостиная"><i></i><img src="img/living04.jpg" width="960" height="1280" alt="Кухня-гостиная" loading="lazy" decoding="async"></button><figcaption>Кухня-гостиная</figcaption></figure>
+        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Кухня-гостиная"><i></i><img src="img/living05.jpg" width="960" height="1280" alt="Кухня-гостиная" loading="lazy" decoding="async"></button><figcaption>Кухня-гостиная</figcaption></figure>
+        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Кухня-гостиная"><i></i><img src="img/living06.jpg" width="960" height="1280" alt="Кухня-гостиная" loading="lazy" decoding="async"></button><figcaption>Кухня-гостиная</figcaption></figure>
       </div></div>
       <div class="group" data-kind="projects" data-room="hall"><h3>Коридор</h3><div class="strip">
         <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Коридор"><i></i><img src="img/hall01.jpg" width="960" height="1280" alt="Коридор" loading="lazy" decoding="async"></button><figcaption>Коридор</figcaption></figure>
@@ -488,19 +489,18 @@ footer b{font-family:var(--serif);font-size:1.3rem;font-weight:500;color:var(--c
         <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Коридор"><i></i><img src="img/hall07.jpg" width="960" height="1280" alt="Коридор" loading="lazy" decoding="async"></button><figcaption>Коридор</figcaption></figure>
         <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Коридор"><i></i><img src="img/hall08.jpg" width="960" height="1280" alt="Коридор" loading="lazy" decoding="async"></button><figcaption>Коридор</figcaption></figure>
       </div></div>
-      <div class="group" data-kind="projects" data-room="living"><h3>Кухня-гостиная</h3><div class="strip">
-        <figure class="shot" style="--r:1.3333"><button type="button" aria-label="Открыть: Кухня-гостиная"><i></i><img src="img/living01.jpg" width="1280" height="960" alt="Кухня-гостиная" loading="lazy" decoding="async"></button><figcaption>Кухня-гостиная</figcaption></figure>
-        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Кухня-гостиная"><i></i><img src="img/living02.jpg" width="960" height="1280" alt="Кухня-гостиная" loading="lazy" decoding="async"></button><figcaption>Кухня-гостиная</figcaption></figure>
-        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Кухня-гостиная"><i></i><img src="img/living03.jpg" width="960" height="1280" alt="Кухня-гостиная" loading="lazy" decoding="async"></button><figcaption>Кухня-гостиная</figcaption></figure>
-        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Кухня-гостиная"><i></i><img src="img/living04.jpg" width="960" height="1280" alt="Кухня-гостиная" loading="lazy" decoding="async"></button><figcaption>Кухня-гостиная</figcaption></figure>
-        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Кухня-гостиная"><i></i><img src="img/living05.jpg" width="960" height="1280" alt="Кухня-гостиная" loading="lazy" decoding="async"></button><figcaption>Кухня-гостиная</figcaption></figure>
-        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Кухня-гостиная"><i></i><img src="img/living06.jpg" width="960" height="1280" alt="Кухня-гостиная" loading="lazy" decoding="async"></button><figcaption>Кухня-гостиная</figcaption></figure>
-      </div></div>
       <div class="group" data-kind="projects" data-room="bath"><h3>Санузел</h3><div class="strip">
         <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Санузел"><i></i><img src="img/bath01.jpg" width="960" height="1280" alt="Санузел" loading="lazy" decoding="async"></button><figcaption>Санузел</figcaption></figure>
         <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Санузел"><i></i><img src="img/bath02.jpg" width="960" height="1280" alt="Санузел" loading="lazy" decoding="async"></button><figcaption>Санузел</figcaption></figure>
         <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Санузел"><i></i><img src="img/bath03.jpg" width="960" height="1280" alt="Санузел" loading="lazy" decoding="async"></button><figcaption>Санузел</figcaption></figure>
         <figure class="shot" style="--r:0.6898"><button type="button" aria-label="Открыть: Санузел"><i></i><img src="img/bath04.jpg" width="883" height="1280" alt="Санузел" loading="lazy" decoding="async"></button><figcaption>Санузел</figcaption></figure>
+      </div></div>
+      <div class="group" data-kind="projects" data-room="bedroom"><h3>Спальня</h3><div class="strip">
+        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Спальня"><i></i><img src="img/bedroom01.jpg" width="960" height="1280" alt="Спальня" loading="lazy" decoding="async"></button><figcaption>Спальня</figcaption></figure>
+        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Спальня"><i></i><img src="img/bedroom02.jpg" width="960" height="1280" alt="Спальня" loading="lazy" decoding="async"></button><figcaption>Спальня</figcaption></figure>
+        <figure class="shot" style="--r:1.3333"><button type="button" aria-label="Открыть: Спальня"><i></i><img src="img/bedroom03.jpg" width="1280" height="960" alt="Спальня" loading="lazy" decoding="async"></button><figcaption>Спальня</figcaption></figure>
+        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Спальня"><i></i><img src="img/bedroom04.jpg" width="960" height="1280" alt="Спальня" loading="lazy" decoding="async"></button><figcaption>Спальня</figcaption></figure>
+        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Спальня"><i></i><img src="img/bedroom05.jpg" width="960" height="1280" alt="Спальня" loading="lazy" decoding="async"></button><figcaption>Спальня</figcaption></figure>
       </div></div>
       <div class="group" data-kind="vis" data-room="v-living"><h3>Кухня-гостиная</h3><div class="strip">
         <figure class="shot" style="--r:2.0126"><button type="button" aria-label="Открыть: Кухня-гостиная"><i></i><img src="img/vis01.jpg" width="1280" height="636" alt="Кухня-гостиная, визуализация" loading="lazy" decoding="async"></button><figcaption>Кухня-гостиная</figcaption></figure>
