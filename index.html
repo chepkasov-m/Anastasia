@@ -435,6 +435,7 @@ footer b{font-family:var(--serif);font-size:1.3rem;font-weight:500;color:var(--c
     <div class="sticky-bar" id="sticky-bar">
     <div class="filters" role="group" aria-label="Фильтр работ">
       <button class="chip" type="button" data-f="projects" aria-pressed="true">Реализованные проекты</button>
+      <button class="chip" type="button" data-f="tx" aria-pressed="false">Текстиль</button>
       <button class="chip" type="button" data-f="vis" aria-pressed="false">Визуализации</button>
       <button class="chip" type="button" data-f="plans" aria-pressed="false">Планировки</button>
       <button class="chip" type="button" data-f="all" aria-pressed="false">Всё вместе</button>
@@ -445,6 +446,12 @@ footer b{font-family:var(--serif);font-size:1.3rem;font-weight:500;color:var(--c
       <button class="chip chip-room" type="button" data-room="hall" aria-pressed="false">Коридор</button>
       <button class="chip chip-room" type="button" data-room="bath" aria-pressed="false">Санузел</button>
       <button class="chip chip-room" type="button" data-room="bedroom" aria-pressed="false">Спальня</button>
+    </div>
+    <div class="filters rooms" id="rooms-tx" data-for="tx" role="group" aria-label="Виды текстиля" hidden>
+      <button class="chip chip-room" type="button" data-room="all" aria-pressed="true">Весь текстиль</button>
+      <button class="chip chip-room" type="button" data-room="tx-curtains" aria-pressed="false">Шторы</button>
+      <button class="chip chip-room" type="button" data-room="tx-roman" aria-pressed="false">Римские шторы</button>
+      <button class="chip chip-room" type="button" data-room="tx-decor" aria-pressed="false">Декор</button>
     </div>
     <div class="filters rooms" id="rooms-vis" data-for="vis" role="group" aria-label="Комнаты визуализаций" hidden>
       <button class="chip chip-room" type="button" data-room="all" aria-pressed="true">Все комнаты</button>
@@ -501,6 +508,80 @@ footer b{font-family:var(--serif);font-size:1.3rem;font-weight:500;color:var(--c
         <figure class="shot" style="--r:1.3333"><button type="button" aria-label="Открыть: Спальня"><i></i><img src="img/bedroom03.jpg" width="1280" height="960" alt="Спальня" loading="lazy" decoding="async"></button><figcaption>Спальня</figcaption></figure>
         <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Спальня"><i></i><img src="img/bedroom04.jpg" width="960" height="1280" alt="Спальня" loading="lazy" decoding="async"></button><figcaption>Спальня</figcaption></figure>
         <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Спальня"><i></i><img src="img/bedroom05.jpg" width="960" height="1280" alt="Спальня" loading="lazy" decoding="async"></button><figcaption>Спальня</figcaption></figure>
+      </div></div>
+      <div class="group" data-kind="tx" data-room="tx-curtains"><h3>Шторы</h3><div class="strip">
+        <figure class="shot" style="--r:0.6664"><button type="button" aria-label="Открыть: Шторы"><i></i><img src="textile/curtains03.jpg" width="733" height="1100" alt="Шторы" loading="lazy" decoding="async"></button><figcaption>Шторы</figcaption></figure>
+        <figure class="shot" style="--r:0.6173"><button type="button" aria-label="Открыть: Шторы"><i></i><img src="textile/curtains01.jpg" width="679" height="1100" alt="Шторы" loading="lazy" decoding="async"></button><figcaption>Шторы</figcaption></figure>
+        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Шторы"><i></i><img src="textile/curtains02.jpg" width="825" height="1100" alt="Шторы" loading="lazy" decoding="async"></button><figcaption>Шторы</figcaption></figure>
+        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Шторы"><i></i><img src="textile/curtains04.jpg" width="825" height="1100" alt="Шторы" loading="lazy" decoding="async"></button><figcaption>Шторы</figcaption></figure>
+        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Шторы"><i></i><img src="textile/curtains05.jpg" width="825" height="1100" alt="Шторы" loading="lazy" decoding="async"></button><figcaption>Шторы</figcaption></figure>
+        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Шторы"><i></i><img src="textile/curtains06.jpg" width="825" height="1100" alt="Шторы" loading="lazy" decoding="async"></button><figcaption>Шторы</figcaption></figure>
+        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Шторы"><i></i><img src="textile/curtains07.jpg" width="825" height="1100" alt="Шторы" loading="lazy" decoding="async"></button><figcaption>Шторы</figcaption></figure>
+        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Шторы"><i></i><img src="textile/curtains08.jpg" width="825" height="1100" alt="Шторы" loading="lazy" decoding="async"></button><figcaption>Шторы</figcaption></figure>
+        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Шторы"><i></i><img src="textile/curtains09.jpg" width="825" height="1100" alt="Шторы" loading="lazy" decoding="async"></button><figcaption>Шторы</figcaption></figure>
+        <figure class="shot" style="--r:1.3333"><button type="button" aria-label="Открыть: Шторы"><i></i><img src="textile/curtains10.jpg" width="1100" height="825" alt="Шторы" loading="lazy" decoding="async"></button><figcaption>Шторы</figcaption></figure>
+        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Шторы"><i></i><img src="textile/curtains11.jpg" width="825" height="1100" alt="Шторы" loading="lazy" decoding="async"></button><figcaption>Шторы</figcaption></figure>
+        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Шторы"><i></i><img src="textile/curtains12.jpg" width="825" height="1100" alt="Шторы" loading="lazy" decoding="async"></button><figcaption>Шторы</figcaption></figure>
+        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Шторы"><i></i><img src="textile/curtains13.jpg" width="825" height="1100" alt="Шторы" loading="lazy" decoding="async"></button><figcaption>Шторы</figcaption></figure>
+        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Шторы"><i></i><img src="textile/curtains14.jpg" width="825" height="1100" alt="Шторы" loading="lazy" decoding="async"></button><figcaption>Шторы</figcaption></figure>
+        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Шторы"><i></i><img src="textile/curtains15.jpg" width="825" height="1100" alt="Шторы" loading="lazy" decoding="async"></button><figcaption>Шторы</figcaption></figure>
+        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Шторы"><i></i><img src="textile/curtains16.jpg" width="825" height="1100" alt="Шторы" loading="lazy" decoding="async"></button><figcaption>Шторы</figcaption></figure>
+        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Шторы"><i></i><img src="textile/curtains17.jpg" width="825" height="1100" alt="Шторы" loading="lazy" decoding="async"></button><figcaption>Шторы</figcaption></figure>
+        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Шторы"><i></i><img src="textile/curtains18.jpg" width="825" height="1100" alt="Шторы" loading="lazy" decoding="async"></button><figcaption>Шторы</figcaption></figure>
+        <figure class="shot" style="--r:0.6664"><button type="button" aria-label="Открыть: Шторы"><i></i><img src="textile/curtains19.jpg" width="733" height="1100" alt="Шторы" loading="lazy" decoding="async"></button><figcaption>Шторы</figcaption></figure>
+        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Шторы"><i></i><img src="textile/curtains20.jpg" width="825" height="1100" alt="Шторы" loading="lazy" decoding="async"></button><figcaption>Шторы</figcaption></figure>
+        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Шторы"><i></i><img src="textile/curtains21.jpg" width="825" height="1100" alt="Шторы" loading="lazy" decoding="async"></button><figcaption>Шторы</figcaption></figure>
+        <figure class="shot" style="--r:0.6664"><button type="button" aria-label="Открыть: Шторы"><i></i><img src="textile/curtains22.jpg" width="733" height="1100" alt="Шторы" loading="lazy" decoding="async"></button><figcaption>Шторы</figcaption></figure>
+        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Шторы"><i></i><img src="textile/curtains23.jpg" width="825" height="1100" alt="Шторы" loading="lazy" decoding="async"></button><figcaption>Шторы</figcaption></figure>
+        <figure class="shot" style="--r:1.3333"><button type="button" aria-label="Открыть: Шторы"><i></i><img src="textile/curtains24.jpg" width="1100" height="825" alt="Шторы" loading="lazy" decoding="async"></button><figcaption>Шторы</figcaption></figure>
+        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Шторы"><i></i><img src="textile/curtains25.jpg" width="825" height="1100" alt="Шторы" loading="lazy" decoding="async"></button><figcaption>Шторы</figcaption></figure>
+        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Шторы"><i></i><img src="textile/curtains26.jpg" width="825" height="1100" alt="Шторы" loading="lazy" decoding="async"></button><figcaption>Шторы</figcaption></figure>
+        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Шторы"><i></i><img src="textile/curtains27.jpg" width="825" height="1100" alt="Шторы" loading="lazy" decoding="async"></button><figcaption>Шторы</figcaption></figure>
+        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Шторы"><i></i><img src="textile/curtains28.jpg" width="825" height="1100" alt="Шторы" loading="lazy" decoding="async"></button><figcaption>Шторы</figcaption></figure>
+        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Шторы"><i></i><img src="textile/curtains29.jpg" width="825" height="1100" alt="Шторы" loading="lazy" decoding="async"></button><figcaption>Шторы</figcaption></figure>
+        <figure class="shot" style="--r:0.6664"><button type="button" aria-label="Открыть: Шторы"><i></i><img src="textile/curtains30.jpg" width="733" height="1100" alt="Шторы" loading="lazy" decoding="async"></button><figcaption>Шторы</figcaption></figure>
+        <figure class="shot" style="--r:1.3333"><button type="button" aria-label="Открыть: Шторы"><i></i><img src="textile/curtains31.jpg" width="1100" height="825" alt="Шторы" loading="lazy" decoding="async"></button><figcaption>Шторы</figcaption></figure>
+        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Шторы"><i></i><img src="textile/curtains32.jpg" width="825" height="1100" alt="Шторы" loading="lazy" decoding="async"></button><figcaption>Шторы</figcaption></figure>
+        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Шторы"><i></i><img src="textile/curtains33.jpg" width="825" height="1100" alt="Шторы" loading="lazy" decoding="async"></button><figcaption>Шторы</figcaption></figure>
+        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Шторы"><i></i><img src="textile/curtains34.jpg" width="825" height="1100" alt="Шторы" loading="lazy" decoding="async"></button><figcaption>Шторы</figcaption></figure>
+        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Шторы"><i></i><img src="textile/curtains35.jpg" width="825" height="1100" alt="Шторы" loading="lazy" decoding="async"></button><figcaption>Шторы</figcaption></figure>
+      </div></div>
+      <div class="group" data-kind="tx" data-room="tx-roman"><h3>Римские шторы</h3><div class="strip">
+        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Римские шторы"><i></i><img src="textile/roman01.jpg" width="825" height="1100" alt="Римские шторы" loading="lazy" decoding="async"></button><figcaption>Римские шторы</figcaption></figure>
+        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Римские шторы"><i></i><img src="textile/roman02.jpg" width="825" height="1100" alt="Римские шторы" loading="lazy" decoding="async"></button><figcaption>Римские шторы</figcaption></figure>
+        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Римские шторы"><i></i><img src="textile/roman03.jpg" width="825" height="1100" alt="Римские шторы" loading="lazy" decoding="async"></button><figcaption>Римские шторы</figcaption></figure>
+        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Римские шторы"><i></i><img src="textile/roman04.jpg" width="825" height="1100" alt="Римские шторы" loading="lazy" decoding="async"></button><figcaption>Римские шторы</figcaption></figure>
+        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Римские шторы"><i></i><img src="textile/roman05.jpg" width="825" height="1100" alt="Римские шторы" loading="lazy" decoding="async"></button><figcaption>Римские шторы</figcaption></figure>
+        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Римские шторы"><i></i><img src="textile/roman06.jpg" width="825" height="1100" alt="Римские шторы" loading="lazy" decoding="async"></button><figcaption>Римские шторы</figcaption></figure>
+        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Римские шторы"><i></i><img src="textile/roman07.jpg" width="825" height="1100" alt="Римские шторы" loading="lazy" decoding="async"></button><figcaption>Римские шторы</figcaption></figure>
+        <figure class="shot" style="--r:1.3333"><button type="button" aria-label="Открыть: Римские шторы"><i></i><img src="textile/roman08.jpg" width="1100" height="825" alt="Римские шторы" loading="lazy" decoding="async"></button><figcaption>Римские шторы</figcaption></figure>
+        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Римские шторы"><i></i><img src="textile/roman09.jpg" width="825" height="1100" alt="Римские шторы" loading="lazy" decoding="async"></button><figcaption>Римские шторы</figcaption></figure>
+        <figure class="shot" style="--r:1.3333"><button type="button" aria-label="Открыть: Римские шторы"><i></i><img src="textile/roman10.jpg" width="1100" height="825" alt="Римские шторы" loading="lazy" decoding="async"></button><figcaption>Римские шторы</figcaption></figure>
+        <figure class="shot" style="--r:0.6664"><button type="button" aria-label="Открыть: Римские шторы"><i></i><img src="textile/roman11.jpg" width="733" height="1100" alt="Римские шторы" loading="lazy" decoding="async"></button><figcaption>Римские шторы</figcaption></figure>
+        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Римские шторы"><i></i><img src="textile/roman12.jpg" width="825" height="1100" alt="Римские шторы" loading="lazy" decoding="async"></button><figcaption>Римские шторы</figcaption></figure>
+        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Римские шторы"><i></i><img src="textile/roman13.jpg" width="825" height="1100" alt="Римские шторы" loading="lazy" decoding="async"></button><figcaption>Римские шторы</figcaption></figure>
+        <figure class="shot" style="--r:1.3333"><button type="button" aria-label="Открыть: Римские шторы"><i></i><img src="textile/roman14.jpg" width="1100" height="825" alt="Римские шторы" loading="lazy" decoding="async"></button><figcaption>Римские шторы</figcaption></figure>
+        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Римские шторы"><i></i><img src="textile/roman15.jpg" width="825" height="1100" alt="Римские шторы" loading="lazy" decoding="async"></button><figcaption>Римские шторы</figcaption></figure>
+        <figure class="shot" style="--r:1.3333"><button type="button" aria-label="Открыть: Римские шторы"><i></i><img src="textile/roman16.jpg" width="1100" height="825" alt="Римские шторы" loading="lazy" decoding="async"></button><figcaption>Римские шторы</figcaption></figure>
+        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Римские шторы"><i></i><img src="textile/roman17.jpg" width="825" height="1100" alt="Римские шторы" loading="lazy" decoding="async"></button><figcaption>Римские шторы</figcaption></figure>
+        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Римские шторы"><i></i><img src="textile/roman18.jpg" width="825" height="1100" alt="Римские шторы" loading="lazy" decoding="async"></button><figcaption>Римские шторы</figcaption></figure>
+        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Римские шторы"><i></i><img src="textile/roman19.jpg" width="825" height="1100" alt="Римские шторы" loading="lazy" decoding="async"></button><figcaption>Римские шторы</figcaption></figure>
+        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Римские шторы"><i></i><img src="textile/roman20.jpg" width="825" height="1100" alt="Римские шторы" loading="lazy" decoding="async"></button><figcaption>Римские шторы</figcaption></figure>
+        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Римские шторы"><i></i><img src="textile/roman21.jpg" width="825" height="1100" alt="Римские шторы" loading="lazy" decoding="async"></button><figcaption>Римские шторы</figcaption></figure>
+      </div></div>
+      <div class="group" data-kind="tx" data-room="tx-decor"><h3>Декор</h3><div class="strip">
+        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Декор"><i></i><img src="textile/decor01.jpg" width="825" height="1100" alt="Декор" loading="lazy" decoding="async"></button><figcaption>Декор</figcaption></figure>
+        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Декор"><i></i><img src="textile/decor02.jpg" width="825" height="1100" alt="Декор" loading="lazy" decoding="async"></button><figcaption>Декор</figcaption></figure>
+        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Декор"><i></i><img src="textile/decor03.jpg" width="825" height="1100" alt="Декор" loading="lazy" decoding="async"></button><figcaption>Декор</figcaption></figure>
+        <figure class="shot" style="--r:1.3333"><button type="button" aria-label="Открыть: Декор"><i></i><img src="textile/decor04.jpg" width="1100" height="825" alt="Декор" loading="lazy" decoding="async"></button><figcaption>Декор</figcaption></figure>
+        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Декор"><i></i><img src="textile/decor05.jpg" width="825" height="1100" alt="Декор" loading="lazy" decoding="async"></button><figcaption>Декор</figcaption></figure>
+        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Декор"><i></i><img src="textile/decor06.jpg" width="825" height="1100" alt="Декор" loading="lazy" decoding="async"></button><figcaption>Декор</figcaption></figure>
+        <figure class="shot" style="--r:1.3333"><button type="button" aria-label="Открыть: Декор"><i></i><img src="textile/decor07.jpg" width="1100" height="825" alt="Декор" loading="lazy" decoding="async"></button><figcaption>Декор</figcaption></figure>
+        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Декор"><i></i><img src="textile/decor08.jpg" width="825" height="1100" alt="Декор" loading="lazy" decoding="async"></button><figcaption>Декор</figcaption></figure>
+        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Декор"><i></i><img src="textile/decor09.jpg" width="825" height="1100" alt="Декор" loading="lazy" decoding="async"></button><figcaption>Декор</figcaption></figure>
+        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Декор"><i></i><img src="textile/decor10.jpg" width="825" height="1100" alt="Декор" loading="lazy" decoding="async"></button><figcaption>Декор</figcaption></figure>
+        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Декор"><i></i><img src="textile/decor11.jpg" width="825" height="1100" alt="Декор" loading="lazy" decoding="async"></button><figcaption>Декор</figcaption></figure>
+        <figure class="shot" style="--r:0.75"><button type="button" aria-label="Открыть: Декор"><i></i><img src="textile/decor12.jpg" width="825" height="1100" alt="Декор" loading="lazy" decoding="async"></button><figcaption>Декор</figcaption></figure>
       </div></div>
       <div class="group" data-kind="vis" data-room="v-living"><h3>Кухня-гостиная</h3><div class="strip">
         <figure class="shot" style="--r:2.0126"><button type="button" aria-label="Открыть: Кухня-гостиная"><i></i><img src="img/vis01.jpg" width="1280" height="636" alt="Кухня-гостиная, визуализация" loading="lazy" decoding="async"></button><figcaption>Кухня-гостиная</figcaption></figure>
@@ -589,7 +670,7 @@ footer b{font-family:var(--serif);font-size:1.3rem;font-weight:500;color:var(--c
       </article>
       <article class="item">
         <h3>Планировочное решение</h3>
-        <div class="cost">300 ₽<small>за кв. м</small></div>
+        <div class="cost">от 300 ₽<small>за кв. м</small></div>
         <p>Несколько вариантов расстановки мебели с учётом особенностей помещения и вашего образа жизни.</p>
       </article>
       <article class="item">
@@ -599,7 +680,7 @@ footer b{font-family:var(--serif);font-size:1.3rem;font-weight:500;color:var(--c
       </article>
       <article class="item">
         <h3>Декорирование</h3>
-        <div class="cost">500 ₽<small>за кв. м</small></div>
+        <div class="cost">от 500 ₽<small>за кв. м</small></div>
         <p>Подбор штор, тканей, декоративных подушек, покрывал, постельного белья и других текстильных решений для завершённого образа интерьера. Подбор декора и атмосферного освещения, посуды, искусства и флористики.</p>
       </article>
     </div>
@@ -703,8 +784,8 @@ footer b{font-family:var(--serif);font-size:1.3rem;font-weight:500;color:var(--c
   var shots=[].slice.call(gallery.querySelectorAll('.shot'));
   var groups=[].slice.call(gallery.querySelectorAll('.group'));
   var kindChips=document.querySelectorAll('.filters [data-f]');
-  var bars={projects:document.getElementById('rooms'),vis:document.getElementById('rooms-vis')};
-  var curKind='projects',curRoom={projects:'all',vis:'all'};
+  var bars={projects:document.getElementById('rooms'),vis:document.getElementById('rooms-vis'),tx:document.getElementById('rooms-tx')};
+  var curKind='projects',curRoom={projects:'all',vis:'all',tx:'all'};
   var sqRebuild=null;
   var stickyBar=document.getElementById('sticky-bar');
   function backToTop(){
